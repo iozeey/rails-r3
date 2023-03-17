@@ -25,6 +25,8 @@ class ContactsController < ApplicationController
 
     if @contact.save
       redirect_to contact_url(@contact), notice: "Contact was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

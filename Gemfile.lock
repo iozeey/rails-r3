@@ -191,6 +191,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    vcard (0.3.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -209,6 +210,7 @@ GEM
     zeitwerk (2.6.7)
 
 PLATFORMS
+  arm64-darwin-21
   arm64-darwin-22
 
 DEPENDENCIES
@@ -227,6 +229,7 @@ DEPENDENCIES
   tailwindcss-rails
   turbo-rails
   tzinfo-data
+  vcard
   web-console
   webdrivers
 

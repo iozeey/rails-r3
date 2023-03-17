@@ -1,0 +1,23 @@
+<div id="import_result">
+<% if @success > 0 %>
+  <div id="success_explanation" class="text-green-500 px-3 py-2 font-medium rounded-lg mt-3">
+    <h2>Successfully saved <%= pluralize(success, "contact") %></h2>
+  </div>
+<% end %>
+<% if errors.count > 0 %>
+  <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+    <h2>There was a problem saving <%= pluralize(errors.count, "contact") %>:</h2>
+    <ul>
+      <% errors.each do |error| %>
+        <% error.each do |key, value| %>
+          <%# <li><%= key : <%= value.each do  |error| error.full_message end  </li> %>
+          <li><%= key %>: <% value.each do |error| %>
+              <%= error.full_message %>. 
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

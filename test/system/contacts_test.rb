@@ -14,8 +14,8 @@ class ContactsTest < ApplicationSystemTestCase
     visit contacts_url
     click_on "New contact"
 
-    fill_in "Email address", with: @contact.email_address
-    fill_in "Name", with: @contact.name
+    fill_in "Email address", with: "user1@example.com"
+    fill_in "Name", with: "User 1"
     click_on "Create Contact"
 
     assert_text "Contact was successfully created"
