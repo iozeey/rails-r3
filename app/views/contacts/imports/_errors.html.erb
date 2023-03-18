@@ -11,8 +11,13 @@
       <% errors.each do |error| %>
         <% error.each do |key, value| %>
           <%# <li><%= key : <%= value.each do  |error| error.full_message end  </li> %>
-          <li><%= key %>: <% value.each do |error| %>
-              <%= error.full_message %>. 
+          <li><%= key %> : 
+            <% value.each do |ie| %>
+              <% if ie.is_a?(Hash)  %>
+                <%= ie[:full_message] %>
+              <% else %>. 
+                <%= ie.full_message %>
+              <% end %>
             <% end %>
           </li>
         <% end %>
